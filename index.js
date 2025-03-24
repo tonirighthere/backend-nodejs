@@ -4,6 +4,8 @@ require("dotenv").config();
 const database = require("./config/database");
 
 const route = require("./routes/client/index.route");
+const routeAdmin = require("./routes/admin/index.route");
+
 
 database.connect();
 
@@ -16,7 +18,9 @@ app.set("view engine", "pug");
 app.use(express.static("public")); //giúp chèn các file trong public ở trong public luôn, ko phải dẫn
 
 //Route 
+
 route(app);
+routeAdmin(app);
 // app.get("/", (req, res) => {
 //   res.render("client/pages/home/index");
 // });

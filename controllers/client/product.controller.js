@@ -12,7 +12,7 @@ module.exports.index = async (req, res) => {
     item.priceNew = Math.ceil(item.price - item.price * item.discountPercentage * 0.01)
     return item;
   });
-  console.log(products);
+  console.log(newProducts);
 
   res.render("client/pages/products/index", {
     pageTitle: "Trang danh sách sản phẩm",
