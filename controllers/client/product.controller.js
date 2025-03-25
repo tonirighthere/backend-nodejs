@@ -1,3 +1,5 @@
+// phương thức: [GET]  với path: /products
+
 const Product = require("../../models/product.model");
 
 // Lấy DATA không rõ khi nào mới xong => dùng async để chờ
