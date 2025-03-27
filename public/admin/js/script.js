@@ -4,7 +4,6 @@ const buttonStatus = document.querySelectorAll("[button-status]");
 if(buttonStatus.length > 0){
   let url = new URL(window.location.href);
   // để thay đổi url thêm new URL
-  console.log(url);
   buttonStatus.forEach(button => {
     button.addEventListener("click", () => {
       const status = button.getAttribute("button-status"); //lấy giá trị thuộc tính button-status của các buttonv  
@@ -41,3 +40,17 @@ if(formSearch){
 }
 
 // End Form Search
+
+// Pagination
+const buttonPagination = document.querySelectorAll("[button-pagination]");
+if(buttonPagination){
+  let url = new URL(window.location.href);
+  buttonPagination.forEach(button => {
+    button.addEventListener("click", () => {
+      const page = button.getAttribute("button-pagination");
+      url.searchParams.set("page", page);
+      window.location.href = url.href;
+    })
+  })
+}
+// End Pagination
