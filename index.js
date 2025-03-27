@@ -26,13 +26,6 @@ app.use(express.static("public")); //giúp chèn các file trong public ở tron
 
 route(app);
 routeAdmin(app);
-// app.get("/", (req, res) => {
-//   res.render("client/pages/home/index");
-// });
-
-// app.get("/products", (req, res) => {
-//   res.render("client/pages/products/index")
-// });
 
 app.listen(port, () => {
   console.log(`Đang nghe cổng ${port}!`);

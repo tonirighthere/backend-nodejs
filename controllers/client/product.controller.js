@@ -4,7 +4,7 @@ const Product = require("../../models/product.model");
 
 // Lấy DATA không rõ khi nào mới xong => dùng async để chờ
 module.exports.index = async (req, res) => {
-  // const products = await Product.find({});  tim object
+  // const products = await Product.find({});  tim tất cả các object
   const products = await Product.find({
     status: "active", 
     deleted: "false" 

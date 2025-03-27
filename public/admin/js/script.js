@@ -7,7 +7,7 @@ if(buttonStatus.length > 0){
   console.log(url);
   buttonStatus.forEach(button => {
     button.addEventListener("click", () => {
-      const status = button.getAttribute("button-status");
+      const status = button.getAttribute("button-status"); //lấy giá trị thuộc tính button-status của các buttonv  
       if(status){
         // "": params, sau là giá trị
         url.searchParams.set("status", status);

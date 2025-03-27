@@ -1,5 +1,6 @@
 const mongoose = require("mongoose");
 
+// Định nghĩa cấu trúc của dữ liệu products trong MongoDB.
 const productSchema = new mongoose.Schema(
   {
     title: String,
@@ -15,6 +16,6 @@ const productSchema = new mongoose.Schema(
 );
 
 const Product = mongoose.model('Product', productSchema, "products");
-                                                      // bảng trong compass muốn connect
+    //  ==                        ==                 bảng trong compass muốn connect
 
 module.exports = Product
